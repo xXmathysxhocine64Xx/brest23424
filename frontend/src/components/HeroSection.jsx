@@ -42,7 +42,7 @@ export const HeroSection = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 text-center">
+      <div className="relative z-20 container mx-auto px-4 text-center">
         {/* Main title */}
         <div className="mb-16 float-animation">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 gradient-text">
