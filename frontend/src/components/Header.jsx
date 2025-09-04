@@ -50,21 +50,17 @@ export const Header = () => {
             </div>
           </div>
 
-          {/* Desktop navigation - Enhanced */}
-          <nav className="hidden md:flex items-center gap-10">
+          {/* Desktop navigation - Simple */}
+          <nav className="hidden md:flex items-center gap-8">
             {navItems.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
-                className="text-slate-200 hover:text-white transition-all duration-300 font-semibold text-lg relative group"
+                className="text-slate-300 hover:text-white transition-colors duration-200 font-medium"
               >
                 {item.name}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-400 transition-all duration-300 group-hover:w-full"></span>
               </a>
             ))}
-            <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl">
-              Urgence
-            </button>
           </nav>
 
           {/* Mobile menu */}
