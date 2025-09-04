@@ -3,6 +3,7 @@ import { Card } from './ui/card';
 import { Button } from './ui/button';
 import { Users, MapPin, Briefcase, FileText, Heart, Building2, UserCheck, GraduationCap, Leaf } from 'lucide-react';
 import { cityStats, mainServices, serviceCategories } from './mock';
+import { AnimatedBackground } from './AnimatedBackground';
 
 export const HeroSection = () => {
   const getIcon = (iconName) => {
