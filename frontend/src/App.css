@@ -47,6 +47,48 @@ html {
   }
 }
 
+/* Parallax scrolling effect */
+.parallax-bg {
+  animation: parallax-float 25s linear infinite;
+}
+
+@keyframes parallax-float {
+  0% {
+    transform: translateX(-50px) translateY(-20px);
+  }
+  25% {
+    transform: translateX(20px) translateY(-40px);
+  }
+  50% {
+    transform: translateX(50px) translateY(-10px);
+  }
+  75% {
+    transform: translateX(-20px) translateY(-30px);
+  }
+  100% {
+    transform: translateX(-50px) translateY(-20px);
+  }
+}
+
+/* Animated gradient background */
+.animated-gradient {
+  background: linear-gradient(45deg, #1e293b, #334155, #475569, #1e293b);
+  background-size: 400% 400%;
+  animation: gradient-shift 15s ease infinite;
+}
+
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 /* Floating animation for hero elements */
 .float-animation {
   animation: float 6s ease-in-out infinite;
