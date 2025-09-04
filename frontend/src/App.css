@@ -47,45 +47,48 @@ html {
   }
 }
 
-/* Parallax scrolling effect */
-.parallax-bg {
-  animation: parallax-float 25s linear infinite;
-}
-
-@keyframes parallax-float {
+/* Ken Burns effect for background images */
+@keyframes ken-burns {
   0% {
-    transform: translateX(-50px) translateY(-20px);
+    transform: scale(1) translate(0, 0);
   }
   25% {
-    transform: translateX(20px) translateY(-40px);
+    transform: scale(1.1) translate(-2%, -1%);
   }
   50% {
-    transform: translateX(50px) translateY(-10px);
+    transform: scale(1.05) translate(1%, -2%);
   }
   75% {
-    transform: translateX(-20px) translateY(-30px);
+    transform: scale(1.08) translate(-1%, 1%);
   }
   100% {
-    transform: translateX(-50px) translateY(-20px);
+    transform: scale(1.03) translate(0, 0);
   }
 }
 
-/* Animated gradient background */
-.animated-gradient {
-  background: linear-gradient(45deg, #1e293b, #334155, #475569, #1e293b);
-  background-size: 400% 400%;
-  animation: gradient-shift 15s ease infinite;
-}
-
-@keyframes gradient-shift {
+/* Light sweep animation */
+@keyframes light-sweep {
   0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
+    transform: translateX(-100%) skewX(-20deg);
   }
   100% {
-    background-position: 0% 50%;
+    transform: translateX(200%) skewX(-20deg);
+  }
+}
+
+/* Video loading transition */
+.video-fade-in {
+  animation: fadeInVideo 2s ease-in-out;
+}
+
+@keyframes fadeInVideo {
+  0% {
+    opacity: 0;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1.05);
   }
 }
 
