@@ -31,18 +31,28 @@ export const HeroSection = () => {
           playsInline
           className="w-full h-full object-cover hero-video"
           style={{ filter: 'brightness(0.7)' }}
+          poster="https://images.unsplash.com/photo-1580825451286-4b42f2650edf?w=1920&h=1080&fit=crop"
         >
-          {/* Multiple video sources for better compatibility */}
-          <source src="https://assets.mixkit.co/videos/preview/mixkit-aerial-view-of-a-coastal-city-4889-large.mp4" type="video/mp4" />
-          <source src="https://assets.mixkit.co/videos/preview/mixkit-city-traffic-from-above-4890-large.mp4" type="video/mp4" />
-          <source src="https://assets.mixkit.co/videos/preview/mixkit-aerial-view-of-a-port-city-4891-large.mp4" type="video/mp4" />
-          {/* Fallback image for browsers that don't support video */}
-          Your browser does not support the video tag.
+          {/* Try local video first, then fallback to online sources */}
+          <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4" />
+          {/* Fallback to image if video fails */}
         </video>
+        
+        {/* Animated city background as fallback */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat hero-video opacity-70"
+          style={{
+            backgroundImage: `url('https://images.unsplash.com/photo-1580825451286-4b42f2650edf?w=1920&h=1080&fit=crop')`,
+            backgroundAttachment: 'fixed'
+          }}
+        ></div>
+        
         {/* Animated gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-br from-slate-900/70 via-slate-800/60 to-slate-900/80"></div>
-        {/* Additional subtle overlay for better text readability */}
-        <div className="absolute inset-0 bg-slate-900/30"></div>
+        {/* Moving light effect */}
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-transparent via-blue-400/20 to-transparent animate-pulse"></div>
+        </div>
       </div>
 
       {/* Content */}
