@@ -29,18 +29,20 @@ export const HeroSection = () => {
           muted
           loop
           playsInline
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover scale-105"
+          style={{ filter: 'brightness(0.7)' }}
         >
-          <source src="https://player.vimeo.com/external/434045526.sd.mp4?s=c27edd2c9417b8a0ed2194b0f3a9f0a57b4306f6&profile_id=164&oauth2_token_id=57447761" type="video/mp4" />
-          <source src="https://assets.mixkit.co/videos/preview/mixkit-aerial-view-of-a-city-with-skyscrapers-4890-large.mp4" type="video/mp4" />
-          {/* Fallback image */}
-          <img 
-            src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1920&h=1080&fit=crop" 
-            alt="Vue de Brest"
-            className="w-full h-full object-cover"
-          />
+          {/* Multiple video sources for better compatibility */}
+          <source src="https://assets.mixkit.co/videos/preview/mixkit-aerial-view-of-a-coastal-city-4889-large.mp4" type="video/mp4" />
+          <source src="https://assets.mixkit.co/videos/preview/mixkit-city-traffic-from-above-4890-large.mp4" type="video/mp4" />
+          <source src="https://assets.mixkit.co/videos/preview/mixkit-aerial-view-of-a-port-city-4891-large.mp4" type="video/mp4" />
+          {/* Fallback image for browsers that don't support video */}
+          Your browser does not support the video tag.
         </video>
-        <div className="absolute inset-0 bg-slate-900/60"></div>
+        {/* Animated gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-900/70 via-slate-800/60 to-slate-900/80"></div>
+        {/* Additional subtle overlay for better text readability */}
+        <div className="absolute inset-0 bg-slate-900/30"></div>
       </div>
 
       {/* Content */}
