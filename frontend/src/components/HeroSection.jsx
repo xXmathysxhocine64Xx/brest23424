@@ -23,38 +23,8 @@ export const HeroSection = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Brest city video background */}
-      <div className="absolute inset-0">
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="w-full h-full object-cover"
-          style={{ filter: 'brightness(0.6) saturate(1.1)' }}
-          poster="https://images.unsplash.com/photo-1590736969955-71cc94901144?w=1920&h=1080&fit=crop"
-        >
-          {/* Multiple video sources for Brest */}
-          <source src="https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4" type="video/mp4" />
-          <source src="https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_5mb.mp4" type="video/mp4" />
-          <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4" />
-        </video>
-        
-        {/* Fallback - Brest cityscape image */}
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1590736969955-71cc94901144?w=1920&h=1080&fit=crop')`,
-            opacity: 0.8
-          }}
-        ></div>
-        
-        {/* Video overlay for better text readability */}
-        <div className="absolute inset-0 bg-slate-900/50"></div>
-        
-        {/* Subtle animated overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-slate-900/20 to-slate-900/60"></div>
-      </div>
+      {/* Brest video background */}
+      <BrestVideoBackground />
 
       {/* Content */}
       <div className="relative z-20 container mx-auto px-4 text-center">
