@@ -23,37 +23,22 @@ export const HeroSection = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background video with overlay */}
-      <div className="absolute inset-0">
+      {/* Animated background */}
+      <AnimatedBackground />
+      
+      {/* Video overlay (if available) */}
+      <div className="absolute inset-0 z-10">
         <video
           autoPlay
           muted
           loop
           playsInline
-          className="w-full h-full object-cover hero-video"
-          style={{ filter: 'brightness(0.7)' }}
+          className="w-full h-full object-cover opacity-40 hero-video"
+          style={{ mixBlendMode: 'overlay' }}
           poster="https://images.unsplash.com/photo-1580825451286-4b42f2650edf?w=1920&h=1080&fit=crop"
         >
-          {/* Try local video first, then fallback to online sources */}
-          <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4" />
-          {/* Fallback to image if video fails */}
+          <source src="https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4" type="video/mp4" />
         </video>
-        
-        {/* Animated city background as fallback */}
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat hero-video opacity-70"
-          style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1580825451286-4b42f2650edf?w=1920&h=1080&fit=crop')`,
-            backgroundAttachment: 'fixed'
-          }}
-        ></div>
-        
-        {/* Animated gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-900/70 via-slate-800/60 to-slate-900/80"></div>
-        {/* Moving light effect */}
-        <div className="absolute inset-0 opacity-20">
-          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-transparent via-blue-400/20 to-transparent animate-pulse"></div>
-        </div>
       </div>
 
       {/* Content */}
