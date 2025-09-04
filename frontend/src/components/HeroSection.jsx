@@ -29,7 +29,7 @@ export const HeroSection = () => {
           muted
           loop
           playsInline
-          className="w-full h-full object-cover scale-105"
+          className="w-full h-full object-cover hero-video"
           style={{ filter: 'brightness(0.7)' }}
         >
           {/* Multiple video sources for better compatibility */}
