@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 
-export const BrestVideoBackground = () => {
+export const CityVideoBackground = () => {
   const videoRef = useRef(null);
   const [videoLoaded, setVideoLoaded] = useState(false);
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
