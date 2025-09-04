@@ -47,23 +47,49 @@ html {
   }
 }
 
-/* Ken Burns effect for background images */
-@keyframes ken-burns {
-  0% {
-    transform: scale(1) translate(0, 0);
-  }
-  25% {
-    transform: scale(1.1) translate(-2%, -1%);
-  }
-  50% {
-    transform: scale(1.05) translate(1%, -2%);
-  }
-  75% {
-    transform: scale(1.08) translate(-1%, 1%);
-  }
-  100% {
-    transform: scale(1.03) translate(0, 0);
-  }
+/* Ken Burns effect variations for background images */
+@keyframes ken-burns-0 {
+  0% { transform: scale(1) translate(0, 0); }
+  100% { transform: scale(1.1) translate(-2%, -1%); }
+}
+
+@keyframes ken-burns-1 {
+  0% { transform: scale(1.05) translate(1%, -2%); }
+  100% { transform: scale(1) translate(0, 0); }
+}
+
+@keyframes ken-burns-2 {
+  0% { transform: scale(1.02) translate(-1%, 1%); }
+  100% { transform: scale(1.08) translate(1%, -1%); }
+}
+
+/* Floating particles animations */
+@keyframes float-particle-0 {
+  0% { transform: translateY(100vh) translateX(0); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { transform: translateY(-10vh) translateX(20px); opacity: 0; }
+}
+
+@keyframes float-particle-1 {
+  0% { transform: translateY(100vh) translateX(0); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { transform: translateY(-10vh) translateX(-30px); opacity: 0; }
+}
+
+@keyframes float-particle-2 {
+  0% { transform: translateY(100vh) translateX(0); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { transform: translateY(-10vh) translateX(10px); opacity: 0; }
+}
+
+@keyframes float-particle-3 {
+  0% { transform: translateY(100vh) translateX(0); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { transform: translateY(-10vh) translateX(-15px); opacity: 0; }
 }
 
 /* Light sweep animation */
