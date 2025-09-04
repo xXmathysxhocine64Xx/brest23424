@@ -48,8 +48,8 @@ export const HeroSection = () => {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 text-center">
         {/* Main title */}
-        <div className="mb-16">
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+        <div className="mb-16 float-animation">
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 gradient-text">
             Bienvenue à Brest
           </h1>
           <p className="text-xl md:text-2xl text-slate-200 max-w-4xl mx-auto leading-relaxed">
