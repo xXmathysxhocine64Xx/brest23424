@@ -1,9 +1,9 @@
 // Mock data for Brest municipality website
 
 export const cityStats = {
-  population: "140 000",
-  area: "49.5 km²",
-  activeProjects: "23"
+  urgentInfo: "Urgences",
+  serviceHours: "8h30-17h30",
+  waitTime: "< 15 min"
 };
 
 export const mainServices = [
