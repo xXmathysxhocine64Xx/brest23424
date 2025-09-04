@@ -22,14 +22,25 @@ export const HeroSection = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background image with overlay */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: `url('https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1920&h=1080&fit=crop')`
-        }}
-      >
-        <div className="absolute inset-0 bg-slate-900/70"></div>
+      {/* Background video with overlay */}
+      <div className="absolute inset-0">
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="w-full h-full object-cover"
+        >
+          <source src="https://player.vimeo.com/external/434045526.sd.mp4?s=c27edd2c9417b8a0ed2194b0f3a9f0a57b4306f6&profile_id=164&oauth2_token_id=57447761" type="video/mp4" />
+          <source src="https://assets.mixkit.co/videos/preview/mixkit-aerial-view-of-a-city-with-skyscrapers-4890-large.mp4" type="video/mp4" />
+          {/* Fallback image */}
+          <img 
+            src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1920&h=1080&fit=crop" 
+            alt="Vue de Brest"
+            className="w-full h-full object-cover"
+          />
+        </video>
+        <div className="absolute inset-0 bg-slate-900/60"></div>
       </div>
 
       {/* Content */}
