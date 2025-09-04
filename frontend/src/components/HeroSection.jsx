@@ -28,10 +28,10 @@ export const HeroSection = () => {
 
       {/* Content */}
       <div className="relative z-20 container mx-auto px-4 text-center">
-        {/* Main title - Better positioning */}
-        <div className="mb-20 float-animation">
-          <h1 className="text-6xl md:text-8xl font-bold text-white mb-8 gradient-text leading-tight">
-            Bienvenue à Brest
+        {/* Main title - Highly visible */}
+        <div className="mb-24 float-animation">
+          <h1 className="text-7xl md:text-9xl font-black text-white mb-10 leading-none tracking-wide">
+            BIENVENUE À BREST
           </h1>
           <p className="text-2xl md:text-3xl text-slate-100 max-w-5xl mx-auto leading-relaxed font-medium">
             Une ville moderne et dynamique au service de ses citoyens. Ensemble, 
@@ -39,36 +39,30 @@ export const HeroSection = () => {
           </p>
         </div>
 
-        {/* Important city information */}
+        {/* Important city information - Transparent background */}
         <div className="flex flex-col md:flex-row items-center justify-center gap-8 mb-16">
-          <Card className="bg-red-600/20 backdrop-blur-md border-red-400/30 p-8 text-center min-w-[200px] hover:bg-red-500/25 transition-all duration-300 border-2">
-            <div className="bg-red-500 p-3 rounded-full w-fit mx-auto mb-4">
-              <svg className="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.732-.833-2.5 0L4.27 18.5c-.77.833.192 2.5 1.732 2.5z" />
-              </svg>
-            </div>
-            <div className="text-4xl font-bold text-white mb-2">{cityStats.urgentInfo}</div>
-            <div className="text-red-100 font-medium">15 SAMU</div>
+          <Card className="bg-white/10 backdrop-blur-md border-white/20 p-8 text-center min-w-[200px] hover:bg-white/15 transition-all duration-300">
+            <svg className="w-12 h-12 text-white mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.732-.833-2.5 0L4.27 18.5c-.77.833.192 2.5 1.732 2.5z" />
+            </svg>
+            <div className="text-4xl font-bold text-white mb-2">Urgences</div>
+            <div className="text-slate-200 font-medium">15 SAMU</div>
           </Card>
 
-          <Card className="bg-green-600/20 backdrop-blur-md border-green-400/30 p-8 text-center min-w-[200px] hover:bg-green-500/25 transition-all duration-300 border-2">
-            <div className="bg-green-500 p-3 rounded-full w-fit mx-auto mb-4">
-              <svg className="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-            </div>
-            <div className="text-4xl font-bold text-white mb-2">{cityStats.serviceHours}</div>
-            <div className="text-green-100 font-medium">Horaires d'ouverture</div>
+          <Card className="bg-white/10 backdrop-blur-md border-white/20 p-8 text-center min-w-[200px] hover:bg-white/15 transition-all duration-300">
+            <svg className="w-12 h-12 text-white mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <div className="text-4xl font-bold text-white mb-2">8h30-17h30</div>
+            <div className="text-slate-200 font-medium">Horaires d'ouverture</div>
           </Card>
 
-          <Card className="bg-blue-600/20 backdrop-blur-md border-blue-400/30 p-8 text-center min-w-[200px] hover:bg-blue-500/25 transition-all duration-300 border-2">
-            <div className="bg-blue-500 p-3 rounded-full w-fit mx-auto mb-4">
-              <svg className="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-              </svg>
-            </div>
-            <div className="text-4xl font-bold text-white mb-2">{cityStats.waitTime}</div>
-            <div className="text-blue-100 font-medium">Temps d'attente moyen</div>
+          <Card className="bg-white/10 backdrop-blur-md border-white/20 p-8 text-center min-w-[200px] hover:bg-white/15 transition-all duration-300">
+            <svg className="w-12 h-12 text-white mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+            </svg>
+            <div className="text-4xl font-bold text-white mb-2">< 15 min</div>
+            <div className="text-slate-200 font-medium">Temps d'attente moyen</div>
           </Card>
         </div>
 
