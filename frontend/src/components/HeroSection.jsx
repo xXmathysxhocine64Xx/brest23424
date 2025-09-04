@@ -23,8 +23,8 @@ export const HeroSection = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Brest video background */}
-      <BrestVideoBackground />
+      {/* City video background */}
+      <CityVideoBackground />
 
       {/* Content */}
       <div className="relative z-20 container mx-auto px-4 text-center">
